@@ -1,12 +1,12 @@
 `use strict`;
 
 export function getPhotoBySearch(searchValue) {
-    const BASE_URL = 'https://pixabay.com/api/';
-    const KEY = '42424645-ecd3f1048329df1dec069e6a8';
-    const Query = `?key=${KEY}&q=${searchValue}`;
-    const params =
+    const linkUrl = 'https://pixabay.com/api/';
+    const key = '42613362-c652a11a2e3360cb77c84ae86';
+    const q = `?key=${key}&q=${searchValue}`;
+    const image_type =
         '&image_type=photo&orientation=horizontal&safesearch=true';
-    const url = BASE_URL + Query + params;
+    const url = linkUrl + q + image_type;
 
     return fetch(url)
         .then(res => res.json())
