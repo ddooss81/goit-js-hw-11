@@ -1,6 +1,6 @@
 `use strict`;
 
-export function getPhotoBySearch(searchValue) {
+export function getPhotoSearch(searchValue) {
     const linkUrl = 'https://pixabay.com/api/';
     const key = '42613362-c652a11a2e3360cb77c84ae86';
     const q = `?key=${key}&q=${searchValue}`;

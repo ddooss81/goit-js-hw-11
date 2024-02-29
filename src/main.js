@@ -3,8 +3,8 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { renderImages } from './js/render-functions.js';
-import { getPhotoBySearch } from './js/pixabay-api.js';
+import {renderImages} from './js/render-functions.js';
+import {getPhotoSearch} from './js/pixabay-api.js';
 
 const formElem = document.querySelector('.search-form');
 const galleryEl = document.querySelector('.gallery-o');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoader();
         galleryEl.innerHTML = '';
         const value = formElem.querySelector('.input-search').value;
-        getPhotoBySearch(value)
+        getPhotoSearch(value)
             .then(data => {
                 renderImages(data.hits);
             })
