@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         showLoader();
         galleryEl.innerHTML = '';
-        const value = formElem.querySelector('.input-search').value;
+        const value = formElem.querySelector('.input-search').value.trim();
         getPhotoSearch(value)
             .then(data => {
                 renderImages(data.hits);
